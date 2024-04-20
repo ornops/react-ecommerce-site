@@ -1,5 +1,4 @@
-import './categories.styles.scss'
-import CategoryItem from './components/category-item/category-item.component';
+import Directory from './components/directory/directory.component';
 
 const App = () => {
 
@@ -31,12 +30,7 @@ const App = () => {
     }
   ];
   return (
-    <div className="categories-container">
-      {categories.map((category)=>//you can put 'category' instead of {title} and call it inside h2 as 'category.title' but destructuring it and  use {title} is better and shorter
-        <CategoryItem key={category.id} category={category}/>
-        )}
-      
-    </div>
+    <Directory categories={categories}/>
   );
 }
 
